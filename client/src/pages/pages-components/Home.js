@@ -1,9 +1,10 @@
 import React from 'react'
 import styled from 'styled-components'
+import { Link, useHistory } from 'react-router-dom'
 
 const AllContent = styled.div`
     margin: 0;
-    background: #242526;
+    background: linear-gradient(45deg, #242526, #000000);
     min-height: 100vh;
     display: grid;
    justify-items: center;
@@ -53,12 +54,18 @@ const RegisterBTN = styled.button`
 `;
 
 const Home = () => {
+    let Navgtr = useHistory();
     return (
         <AllContent>
             <Heading>Krishha</Heading>
             <Description>The in-web chatting platform with native like fetaures</Description>
-            <LoginBTN>Login</LoginBTN>
-            <RegisterBTN>Register</RegisterBTN>
+            <LoginBTN onClick={()=>{
+                Navgtr.push('/login');
+            }}>Login</LoginBTN>
+            <RegisterBTN onClick={()=>{
+                Navgtr.push('/register')
+            }
+            }>Register</RegisterBTN>
         </AllContent>
     )
 }

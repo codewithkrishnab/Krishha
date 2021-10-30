@@ -4,10 +4,10 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 import KrishhTitle from './modules/style-components';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
-import about from './pages/about';
-import login from './pages/login';
-import Home from './pages/Home';
-
+import about from './pages/pages-components/about';
+import login from './pages/pages-components/login';
+import Home from './pages/pages-components/Home';
+import Register from './pages/pages-components/Register';
 
 
 var propStyleThis = {};
@@ -32,7 +32,7 @@ function App() {
 
     document.fonts.add(loaded_face);
     setLoadedAmsterdam(true);
-    console.log(propStyleThis);
+    console.log('propstylethis',propStyleThis);
     console.log("Loaded");
 
   }).catch(function (error) {
@@ -49,6 +49,7 @@ function App() {
 
           <Route path="/login" exact component={login} />
 
+          <Route path="/register" exact component={Register}/>
         </Switch>
       </Router>
     </div>

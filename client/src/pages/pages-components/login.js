@@ -1,12 +1,13 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const login = () => {
     return (
         <div>
             <form>
-                <label htmlFor="username">Username: </label>
+                <label for="username">Username: </label>
                 <input type="text" name="Username" id="username" />
-                <label htmlFor="psswd">Password: </label>
+                <label for="psswd">Password: </label>
                 <input type="text" name="Password" id="psswd" />
             </form>
         </div>

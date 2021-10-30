@@ -1,0 +1,44 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  color: white;
+  background: linear-gradient(45deg, #222, #131212);
+  display: grid;
+  justify-items: center;
+  align-items: center;
+
+  min-height: 100vh;
+}
+form {
+  transform: translate(-50%, -50%);
+  background: linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 0.15),
+    rgba(85, 85, 85, 0.26)
+  );
+  min-height: 70vh;
+  backdrop-filter: blur(25px);
+  border-radius: 25px;
+
+  width: 80%;
+}
+label {
+  font-size: 3vh;
+  color: #00eeff;
+  text-shadow: 0 0 7px #00eeff;
+  margin-left: 50px;
+  margin-top: 50px;
+}
+input[type="text"] {
+  border: 3px solid #555;
+  max-width: 200px;
+  outline: none;
+  background: #333;
+  color: #00eeff;
+  font-size: 3vh;
+  cursor: pointer;
+  padding: 2vh 4vw;
+  margin: 40px;
+}
